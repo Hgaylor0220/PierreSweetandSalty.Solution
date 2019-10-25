@@ -29,15 +29,26 @@ namespace PierreSweetandSalty.Controllers
             return View();
         }
 
-
-
-
-
-
-
         public ActionResult Edit(int id)
         {
             var thisFlavor = _db.Flavors.FirstOrDefault(flavor => flavor.FlavorId == id);
+            return View(thisFlavor);
+        }
+
+        [HttpPost]
+        public ActionResult Create(Flavor flavor)
+        {
+            _db.Flavors.Add(flavor);
+            _db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult Details(int id)
+        {
+            var thisFlavor = _db.Flavors
+                .Include(flavor => flavor.Recipes)
+                .ThenInclude(join => join.Recipe)
+                .FirstOrDefault(flavor => flavor.FlavorId == id);
             return View(thisFlavor);
         }
 
