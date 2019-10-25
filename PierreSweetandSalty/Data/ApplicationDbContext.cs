@@ -7,17 +7,16 @@ using PierreSweetandSalty.Models;
 
 namespace PierreSweetandSalty.Data
 {
-    public class ApplicationDbContext : IdentityDbContext
+    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
-            : base(options)
-        {
 
-        public virtual DbSet<Flavor> Flavors { get; set; }
-        public DbSet<Treat> Treats { get; set; }
-        public DbSet<FlavorTreat> TreatFlavor { get; set; }
+            public virtual DbSet<Flavor> Flavors { get; set; }
+            public DbSet<Treat> Treats { get; set; }
+            public DbSet<FlavorTreat> TreatFlavor { get; set; }
 
-        public ApplicationDbContext(DbContextOptions options) : base(options) { }
-        }
+            public ApplicationDbContext(DbContextOptions options) : base(options) { }
+
+  
+    
     }
 }
