@@ -29,5 +29,17 @@ namespace PierreSweetandSalty.Controllers
             return View();
         }
 
+
+
+
+
+
+
+        public ActionResult Edit(int id)
+        {
+            var thisFlavor = _db.Flavors.FirstOrDefault(flavor => flavor.FlavorId == id);
+            return View(thisFlavor);
+        }
+
     }
 }
