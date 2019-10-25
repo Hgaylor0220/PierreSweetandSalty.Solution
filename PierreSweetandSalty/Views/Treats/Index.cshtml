@@ -1,0 +1,28 @@
+@using PierreSweetandSalty.Models;
+@using System.Security.Claims;
+@model IEnumerable<PierreSweetandSalty.Models.Treat>
+
+<div class ="jumbotron">
+<h1>Treats for @User.Identity.Name</h1>
+</div>
+<div class ="treathome">
+@if (Model.Any())
+{
+  <h3>
+    @foreach (Treat treat in Model)
+    {
+      <li>@Html.ActionLink($"{treat.Name}", "Details", new { id = treat.TreatId }) 
+    </li>
+    }
+  </h3>
+} 
+else
+{
+  <h3>No treats have been added yet!</h3>
+}
+<br>
+
+<p>@Html.ActionLink("Add new treat", "Create")</p>
+
+<p>@Html.ActionLink("Home", "Index", "Home")</p>
+</div>
