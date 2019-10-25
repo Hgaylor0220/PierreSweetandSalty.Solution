@@ -11,6 +11,12 @@ namespace PierreSweetandSalty.Data
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
+
+        public virtual DbSet<Flavor> Flavors { get; set; }
+        public DbSet<Treat> Treats { get; set; }
+        public DbSet<TreatFlavor> TreatFlavor { get; set; }
+
+        public ApplicationDbContext(DbContextOptions options) : base(options) { }
         }
     }
 }
