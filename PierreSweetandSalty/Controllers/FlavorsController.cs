@@ -18,5 +18,16 @@ namespace PierreSweetandSalty.Controllers
             _db = db;
         }
 
+        public ActionResult Index()
+        {
+            List<Flavor> model = _db.Flavors.ToList();
+            return View(model);
+        }
+
+        public ActionResult Create()
+        {
+            return View();
+        }
+
     }
 }
