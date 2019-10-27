@@ -2,7 +2,13 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class ="jumbotron">
+<h1>Pierre's Sweet and Salty Shop!</h1>
+</div>
+<div class = "Content">
+    <h3> Welcome to Pierre's sweet and Salty Shop where you can customize your favorite treats at the click of a button! What are you waiting for?  </h3>
+ <div class ="nav- bar">   
+<p>@Html.ActionLink("Create an account/Log-in", "Index", "Account")</p>
+<p>@Html.ActionLink("Logged in? See all favorite flavors here!", "Index", "Tags")</p>
+<p>@Html.ActionLink("Logged in? See all your personalized Treats", "Index", "Recipes")</p>
 </div>
