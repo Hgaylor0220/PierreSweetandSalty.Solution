@@ -4,6 +4,6 @@ namespace PierreSweetandSalty.Models
 {
     public class ApplicationUser : IdentityUser
     {
-
+    
     }
 }

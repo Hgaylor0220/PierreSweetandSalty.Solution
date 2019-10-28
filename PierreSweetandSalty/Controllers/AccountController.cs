@@ -21,7 +21,7 @@ namespace PierreSweetandSalty.Controllers
             _db = db;
         }
 
-        public ActionResult Index()
+        public IActionResult Index()
         {
             return View();
         }
