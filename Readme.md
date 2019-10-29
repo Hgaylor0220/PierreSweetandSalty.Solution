@@ -28,6 +28,8 @@ User can customize thier preference on the treats thy are looking for based on t
 |  User creates a Treat| User selects " logged in? Create a Treat| User is logged in and all paths return correctly  | Bring user to the add/ view treats page |
 | User can create or edit a flavor |User selects "Logged in? Create a flavor or view flavors | User is logged in and all paths return correctly | Bring user to the home page to create or edit a flavor |
 
+## Known Bugs
+Page will Idle when attempting to loggin or register user, Refresh page and retun to home then select view treat or flavor. User should be logged in or registered. To confirm select log out from home page.
 
 ## Technologies
 
