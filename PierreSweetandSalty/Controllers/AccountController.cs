@@ -1,10 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Identity;
 using PierreSweetandSalty.Models;
+using PierreSweetandSalty.Data;
 using System.Threading.Tasks;
 using PierreSweetandSalty.ViewModels;
-using PierreSweetandSalty.Data;
-
 
 namespace PierreSweetandSalty.Controllers
 {
@@ -21,7 +20,7 @@ namespace PierreSweetandSalty.Controllers
             _db = db;
         }
 
-        public IActionResult Index()
+        public ActionResult Index()
         {
             return View();
         }
